@@ -12,7 +12,7 @@ def main():
     # Charger les données localement
     @st.cache_data
     def load_data_br():
-        excel_file = r"C:\Users\pc\Desktop\New folder\Python folder\risque_credit\streamlit_app\base_creance_branche_finale.xlsx"
+        excel_file = "base_creance_branche_finale.xlsx"
         df_br = pd.read_excel(excel_file)
         return df_br
 
