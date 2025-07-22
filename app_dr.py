@@ -13,18 +13,18 @@ def main():
     # Charger les données localement
     @st.cache_data
     def load_data_dr():
-        df_dr = pd.read_excel(r"C:\Users\pc\Desktop\New folder\Python folder\risque_credit\streamlit_app\proba_bayesienne_DR.xlsx")
+        df_dr = pd.read_excel("proba_bayesienne_DR.xlsx")
         return df_dr
 
     @st.cache_data
     def load_data_br():
-        excel_file = r"C:\Users\pc\Desktop\New folder\Python folder\risque_credit\streamlit_app\base_creance_branche_finale.xlsx"
+        excel_file = "base_creance_branche_finale.xlsx"
         df_br = pd.read_excel(excel_file)
         return df_br
 
     @st.cache_data
     def load_data_creance_info():
-        df = pd.read_excel(r"C:\Users\pc\Desktop\Etude_risque_crédit\bases_aggregated\base_creance_info_v3.xlsx")
+        df = pd.read_excel("base_creance_info_v3.xlsx")
         df = df[["annee", "NOM_DR", "CODE_DR", "BRANCHE", "proba_a_priori", "nb_contrats_gt1000", "total_contrats", "moyenne_creances_gt1000"]]
         return df
 
