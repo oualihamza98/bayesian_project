@@ -11,7 +11,7 @@ def main():
     # Charger les données localement
     @st.cache_data
     def load_data_cont():
-        df_cont = pd.read_excel(r"C:\Users\pc\Desktop\New folder\Python folder\risque_credit\streamlit_app\base_contentieux_finale_v2.xlsx")
+        df_cont = pd.read_excel("base_contentieux_finale_v2.xlsx")
         return df_cont
 
     df_cont = load_data_cont()
